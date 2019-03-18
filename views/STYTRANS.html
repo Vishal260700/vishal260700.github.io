@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Machine Learning in the Browser</title>
+
+	<!-- Bootstrap CDN, Ajax CDN, Jquery CDN -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Personalised CSS -->
+
+	<link rel="shortcut icon" type="image/jpg" href="../public/Images/logo.jpg">
+	<link rel="stylesheet" type="text/css" href="../public/style/main.css">
+
+	<!-- P5Js CDN -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+
+	<!-- Personalised Js -->
+
+	<script type="text/javascript" src="../public/Js/StyleTransfer.js"></script>
+
+    <!-- ML5Js CDN -->
+
+	<script src="https://unpkg.com/ml5@0.1.1/dist/ml5.min.js"></script>
+
+    <!-- Font Awesome CDN -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+<body>
+	<!-- NAVBAR -->
+
+	<nav class="navbar navbar-custom">
+	  <div class="container-fluid">
+	      <a class="navbar-brand" href="../index.html" style="margin-left: 40%;color: white;">Machine Learning In The Browser</a>
+
+	      <div class="dropdown">
+			  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" style="float: left;margin-top: 8px;margin-left: 400px;background: #EB984E;">ML In Browser Set
+			  <span class="caret"></span></button>
+			  <ul class="dropdown-menu" style="float: left;margin-top: 45px;margin-left: 1220px;background: #EB984E;color: white;">
+			    <li><a href="../views/VCYOLO.html"><center>Web Cam Classifier (YOLO)</center></a></li>
+			    <li><a href="../views/VCMOBNET.html"><center>Web Cam Classifier (MOBILE NET)</center></a></li>
+			    <li><a href="../views/ICMOBNET.html"><center>Image Classifier (MOBILE NET)</center></a></li>
+			    <li><a href="../views/LSTM.html"><center>LSTM (Pre-Trained)</center></a></li>
+			    <li><a href="../views/POSENET.html"><center>Pose Net WebCam (Pre-Trained)</center></a></li>
+			    <li><a href="../views/STYTRANS.html"><center>Style Transfer (Pre-Trained)</center></a></li>
+			    <li><a href="../views/SKETCHRNN.html"><center>Sketch RNN (Pre-Trained)</center></a></li>
+			    <li><a href="../views/VMODAL.html"><center>Video Modalling (Interactive Learning)</center></a></li>
+			    <li><a href="../views/FEATEXT.html"><center>Feature Extractor (Interactive Learning)</center></a></li>
+			    <li><a href="../views/Interactive-Regression/"><center>Interactive Regression (Interactive Training)</center></a></li>
+			    <li><a href="../views/Color_Classifier/"><center>Color Classifier (Browser Training)</center></a></li>
+			    <li><a href="../views/Dynamic-Regression/"><center>Dynamic Regression (Browser Training)</center></a></li>
+			    <li><a href="../views/Regression/1d/"><center>1-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../views/Regression/2d/"><center>2-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../views/Regression/3d/"><center>3-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../views/Wine Quality/"><center>Wine Quality Predictor (Browser Training)</center></a></li>
+			    <li><a href="../views/XOR/"><center>XOR (Browser Training)</center></a></li>
+			  </ul>
+	   	   </div>
+	  </div>
+	</nav>
+
+	<!-- MODAL -->
+
+	<center>
+		<h2>STYLE TRANSFER (Pre-trained Models)</h2><br>
+		<img src="../public/Images/vishal.jpg" style="width: 400px;height: 300px;border-radius: 20px;">
+		<img src="../public/Images/purple-arrow.svg" style="width: 100px;height: 150px;">
+		<img src="../public/Images/vishal.jpg" style="width: 400px;height: 300px;border-radius: 20px;" id="img">
+	</center>
+	<br>
+
+	<h4 style="color: black;">Pretrained Models</h4>
+
+	<center>
+		<button id="la_muse" onclick="la_muse();" class="btn">la_muse</button>
+		<button id="matilde_perez" onclick="matilde_perez();" class="btn">matilde_perez</button>
+		<button id="matta" onclick="matta();" class="btn">matta</button>
+		<button id="rain_princess" onclick="rain_princess();" class="btn">rain_princess</button>
+		<button id="scream" onclick="scream();" class="btn">scream</button>
+		<button id="udnie" onclick="udnie();" class="btn">udnie</button>
+		<button id="wave" onclick="wave();" class="btn">wave</button>
+		<button id="wreck" onclick="wreck();" class="btn">wreck</button>
+	</center>
+
+</body>
+</html>

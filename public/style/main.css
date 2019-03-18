@@ -1,0 +1,40 @@
+.navbar-custom{
+	background: #EB984E;
+}
+button{
+	color: white;
+	background: #EB984E;
+}
+canvas{
+	margin-left: 30%;
+	border-radius: 20px;
+}
+h1{
+	font-size: 30px;
+	position: absolute;
+	top: 75%;
+	left: 25%;
+	color: white;
+}
+i{
+	color:rgb(235, 152, 78 , 0.7); 
+}
+table tr td{
+	font-size: 34px;
+	text-align: center;
+}
+table{
+	border: 1px solid #D7DBDD;
+	border-radius: 10px;
+}
+h3{
+	text-align: center;
+	color: white;
+}
+h4{
+	text-align: center;
+	color: white;
+}
+#head{
+	color: black;
+}

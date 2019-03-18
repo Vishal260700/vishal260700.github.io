@@ -1,0 +1,37 @@
+<!--
+Code By - Vishal Agarwal
+Github - https://github.com/Vishal260700
+LinkedIn - https://linkedin.com/in/vishal-agarwal-42a6a015a/
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flappy Bird : NEAT</title>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</head>
+<style>
+	button{
+		margin: 5px;
+		padding: 5px;
+		border-radius: 10px;
+		border:none;
+		background-color: #F39C12;
+		color: white;
+	}
+</style>
+<body>
+	<center>
+	<h2>FLAPPY BIRD NEAT</h2>
+	<canvas id="flappy" width="500" height="512"></canvas> <br/>
+	<button onclick="speed(60)">x1</button> 
+	<button onclick="speed(120)">x2</button> 
+	<button onclick="speed(180)">x3</button> 
+	<button onclick="speed(300)">x5</button> 
+	<button onclick="speed(0)">MAX</button> 
+	<br/>
+	</center>
+	<script src = "./public/js/Neuroevolution.js"></script>
+	<script src = "./public/js/game.js"></script>
+</body>
+</html>

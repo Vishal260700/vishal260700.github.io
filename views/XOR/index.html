@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ml In The Browser</title>
+
+	<!-- Jquery CDN -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Links -->
+
+	<link rel="shortcut icon" type="image/jpg" href="../../public/Images/logo.jpg">
+
+	<!-- Bootstrap CDN -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- P5Js CDN -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
+
+	<!-- TFJs CDN -->
+
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.5"> </script>
+
+	<!-- Personalised Js -->
+
+	<script src="app.js"></script>
+
+	<!-- Personalised CSS -->
+
+    <link rel="stylesheet" type="text/css" href="../../public/Style/main.css">
+
+</head>
+
+<!-- Additional CSS -->
+
+<style>
+	button{
+	    color: white;
+	    background: #3498DB;
+	}
+	canvas{
+	    position:absolute;
+	    top:130px;
+	    left:430px;
+	    width:100%;
+	    height:100%;
+	    z-index:-1;
+	    border-radius: 20px;
+	    margin-left: 20px;
+	}
+	table tr td{
+	    font-size: 20px;
+	    text-align: center;
+	}
+	table{
+	    border: 1px solid #D7DBDD;
+	}
+	ol li{
+	    text-align: center;
+	}
+</style>
+
+<body>
+
+	<nav class="navbar navbar-custom">
+	  <div class="container-fluid">
+	      <a class="navbar-brand" href="../../index.html" style="margin-left: 40%;color: white;">Machine Learning In The Browser</a>
+
+	      <div class="dropdown">
+			  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" style="float: left;margin-top: 8px;margin-left: 400px;background: #EB984E;">ML In Browser Set
+			  <span class="caret"></span></button>
+			  <ul class="dropdown-menu" style="float: left;margin-top: 45px;margin-left: 1220px;background: #EB984E;color: white;">
+			    <li><a href="../../views/VCYOLO.html"><center>Web Cam Classifier (YOLO)</center></a></li>
+			    <li><a href="../../views/VCMOBNET.html"><center>Web Cam Classifier (MOBILE NET)</center></a></li>
+			    <li><a href="../../views/ICMOBNET.html"><center>Image Classifier (MOBILE NET)</center></a></li>
+			    <li><a href="../../views/LSTM.html"><center>LSTM (Pre-Trained)</center></a></li>
+			    <li><a href="../../views/POSENET.html"><center>Pose Net WebCam (Pre-Trained)</center></a></li>
+			    <li><a href="../../views/STYTRANS.html"><center>Style Transfer (Pre-Trained)</center></a></li>
+			    <li><a href="../../views/SKETCHRNN.html"><center>Sketch RNN (Pre-Trained)</center></a></li>
+			    <li><a href="../../views/VMODAL.html"><center>Video Modalling (Interactive Learning)</center></a></li>
+			    <li><a href="../../views/FEATEXT.html"><center>Feature Extractor (Interactive Learning)</center></a></li>
+			    <li><a href="../../views/Interactive-Regression/"><center>Interactive Regression (Interactive Training)</center></a></li>
+			    <li><a href="../../views/Color_Classifier/"><center>Color Classifier (Browser Training)</center></a></li>
+			    <li><a href="../../views/Dynamic-Regression/"><center>Dynamic Regression (Browser Training)</center></a></li>
+			    <li><a href="../../views/Regression/1d/"><center>1-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../../views/Regression/2d/"><center>2-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../../views/Regression/3d/"><center>3-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../../views/Wine Quality/"><center>Wine Quality Predictor (Browser Training)</center></a></li>
+			    <li><a href="../../views/XOR/"><center>XOR (Browser Training)</center></a></li>
+			  </ul>
+	   	   </div>
+	  </div>
+	</nav>
+
+	<div class="col-md-12">
+		<h2 style="text-align: center;"><u>XOR Neural Network</u></h2>
+	</div>
+
+</body>
+</html>

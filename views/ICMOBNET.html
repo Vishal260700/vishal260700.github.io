@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Machine Learning in the Browser</title>
+
+	<!-- Bootstrap CDN, Ajax CDN, Jquery CDN -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Personalised CSS -->
+
+	<link rel="shortcut icon" type="image/jpg" href="../public/Images/logo.jpg">
+	<link rel="stylesheet" type="text/css" href="../public/style/main.css">
+
+	<!-- P5Js CDN -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+
+    <!-- Personalised Js -->
+
+	<script type="text/javascript" src="../public/Js/Image-Classifier.js"></script>
+
+    <!-- ML5Js CDN -->
+
+	<script src="https://unpkg.com/ml5@0.1.1/dist/ml5.min.js"></script>
+
+    <!-- Font Awesome CDN -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+<body>
+	<!-- NAVBAR -->
+
+	<nav class="navbar navbar-custom">
+	  <div class="container-fluid">
+	      <a class="navbar-brand" href="../index.html" style="margin-left: 40%;color: white;">Machine Learning In The Browser</a>
+
+	      <div class="dropdown">
+			  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" style="float: left;margin-top: 8px;margin-left: 400px;background: #EB984E;">ML In Browser Set
+			  <span class="caret"></span></button>
+			  <ul class="dropdown-menu" style="float: left;margin-top: 45px;margin-left: 1220px;background: #EB984E;color: white;">
+			    <li><a href="../views/VCYOLO.html"><center>Web Cam Classifier (YOLO)</center></a></li>
+			    <li><a href="../views/VCMOBNET.html"><center>Web Cam Classifier (MOBILE NET)</center></a></li>
+			    <li><a href="../views/ICMOBNET.html"><center>Image Classifier (MOBILE NET)</center></a></li>
+			    <li><a href="../views/LSTM.html"><center>LSTM (Pre-Trained)</center></a></li>
+			    <li><a href="../views/POSENET.html"><center>Pose Net WebCam (Pre-Trained)</center></a></li>
+			    <li><a href="../views/STYTRANS.html"><center>Style Transfer (Pre-Trained)</center></a></li>
+			    <li><a href="../views/SKETCHRNN.html"><center>Sketch RNN (Pre-Trained)</center></a></li>
+			    <li><a href="../views/VMODAL.html"><center>Video Modalling (Interactive Learning)</center></a></li>
+			    <li><a href="../views/FEATEXT.html"><center>Feature Extractor (Interactive Learning)</center></a></li>
+			    <li><a href="../views/Interactive-Regression/"><center>Interactive Regression (Interactive Training)</center></a></li>
+			    <li><a href="../views/Color_Classifier/"><center>Color Classifier (Browser Training)</center></a></li>
+			    <li><a href="../views/Dynamic-Regression/"><center>Dynamic Regression (Browser Training)</center></a></li>
+			    <li><a href="../views/Regression/1d/"><center>1-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../views/Regression/2d/"><center>2-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../views/Regression/3d/"><center>3-D Regression (Browser Training)</center></a></li>
+			    <li><a href="../views/Wine Quality/"><center>Wine Quality Predictor (Browser Training)</center></a></li>
+			    <li><a href="../views/XOR/"><center>XOR (Browser Training)</center></a></li>
+			  </ul>
+	   	   </div>
+	  </div>
+	</nav>
+
+	<center>
+		<h2>Image-Classifier</h2>
+	</center>
+	<center><button onclick="Click();" class="btn">Click here to Enable Image Classification model</button></center>
+	<br>
+	<center><p>The Modal has Classified the Given Image as</p> <p style="color: purple;" id="class">...</p> <p>With a confidence of</p> <p style="color: purple;" id="conf">...</p></center>
+
+</body>
+</html>
