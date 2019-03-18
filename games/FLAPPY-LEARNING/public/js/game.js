@@ -1,7 +1,9 @@
 /*
+
 Code By - Vishal Agarwal
 Github - https://github.com/Vishal260700
 LinkedIn - https://linkedin.com/in/vishal-agarwal-42a6a015a/
+
 */
 (function() {
 	var timeouts = [];
