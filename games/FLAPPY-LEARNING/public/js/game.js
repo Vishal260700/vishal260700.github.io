@@ -286,10 +286,10 @@ Game.prototype.display = function(){
 
 window.onload = function(){
 	var sprites = {
-		bird:"./FLAPPY-LEARNING/public/img/bird.png",
-		background:"./FLAPPY-LEARNING/public/img/background.png",
-		pipetop:"./FLAPPY-LEARNING/public/img/pipetop.png",
-		pipebottom:"./FLAPPY-LEARNING/public/img/pipebottom.png"
+		bird:"./public/img/bird.png",
+		background:"./public/img/background.png",
+		pipetop:"./public/img/pipetop.png",
+		pipebottom:"./public/img/pipebottom.png"
 	}
 
 	var start = function(){
