@@ -1,0 +1,128 @@
+<!--
+Code By - Vishal Agarwal
+Github - https://github.com/Vishal260700
+LinkedIn - https://linkedin.com/in/vishal-agarwal-42a6a015a/
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototype For AIMA : Js GridWorld</title>
+
+	<!-- Liberaries -->
+
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="./public/SNAKE-PORTAL/js/jquery-2.1.0.js"></script>
+
+	<!-- Styling -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/main.css">
+
+</head>
+<style>
+	button{
+		margin: 5px;
+		padding: 5px;
+		border-radius: 10px;
+		border:none;
+		background-color: #F39C12;
+		color: white;
+		width: 70px;
+	}
+</style>
+<body style="background: #FAD7A0;">
+
+
+	<!-- NAVBAR -->
+
+	<nav class="navbar navbar-custom">
+	  <div class="container-fluid">
+	      <a class="navbar-brand" href="#" style="margin-left: 40%;color: white;">Prototype for AIMA JS Gridworld</a>
+
+	      <div class="dropdown">
+			  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" style="float: left;margin-top: 8px;margin-left: 400px;background: #EB984E;">NEAT Algorithm
+			  <span class="caret"></span></button>
+			  <ul class="dropdown-menu" style="float: left;margin-top: 45px;margin-left: 1230px;background: #EB984E;color: white;">
+			    <li><a href="#FLAPPY"><center>Flappy Bird Game (NEAT)</center></a></li>
+			    <li><a href="#SNAKE"><center>Snake Game (NEAT)</center></a></li>
+			    <li><a href="#PORTAL"><center>Snake Game (Interactive Portal)</center></a></li>
+			  </ul>
+	   	   </div>
+	  </div>
+	</nav>
+
+	<!-- FLAPPY BIRD NEAT -->
+	
+	<div id="FLAPPY" class="container" style="border:1px solid black;background: white;margin-top: 10px;margin-bottom: 10px;">
+		<center>
+		<h2>FLAPPY BIRD NEAT</h2>
+		<canvas id="flappy" width="500" height="512"></canvas> <br/>
+		<button onclick="speed(60)">x1</button> 
+		<button onclick="speed(120)">x2</button> 
+		<button onclick="speed(180)">x3</button> 
+		<button onclick="speed(300)">x5</button> 
+		<button onclick="speed(0)">MAX</button> 
+		<br/>
+		</center>
+	</div>
+
+	<!-- SNAKE NEAT -->
+	<div id="SNAKE" style="border:1px solid black;background: white;margin-top: 10px;margin-bottom: 10px;" class="container">
+	<h2 style="text-align: center;">Snake Game NEAT Algorithm</h2>
+	<div id="wrapper">
+      <div id="chart"></div>
+      <div id="status">
+        <p>Generation<br><span id="generation">0</span></p>
+        <p>Highest Score<br><span id="highest-score">0</span></p>
+      </div>
+    </div>
+	</div>
+
+	<!-- SNAKE NEAT PORTAL -->
+
+	<div class="container" id="PORTAL" style="border:1px solid black;background: white;margin-top: 10px;margin-bottom: 10px;">
+	<h2 style="text-align: center;">Snake - NEAT - PORTAL</h2>
+		<div class="row">
+	    	<div class="col-sm-6" id="game"></div>
+			<div class="col-sm-6">
+			    <table class="table table-bordered">
+				    <thead class="thead-dark"><tr><th>Control Panel</th><th>Value</th></tr></thead>
+				    <tbody>
+				    <tr><td>Highest Score</td><td> <input type="text" id="hscore" disabled="true" value="0"></td></tr>
+				    <tr><td>No. Epochs</td><td> <input type="text" id="epoch" disabled="true" value="0"></td></tr>
+				    <tr><td>Rules Leart</td><td> <input type="text" id="rlearnt" disabled="true" value="0"></td></tr>
+				    <tr><td>Game Speed(ms)</td><td> <input onchange="u1();" type="text" id="gspeed" value="0"></td></tr>
+				    <tr><td>Learning Rate</td><td> <input onchange="u2();" type="text" id="lrate" value="0"></td></tr>
+				    </tbody>	
+			    </table>
+			    <center><i style="color: red;">2 Epochs per Learning i.e. Generation</i></center>
+			</div>
+		</div>
+	</div>
+
+    <!-- Liberaries for File Loading and Visualizations -->
+    <script src="./public/SNAKE-NEAT/lib/neataptic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="./public/SNAKE-NEAT/lib/frappe-charts.min.iife.js"></script>
+
+    <!-- Custom Js Files for SNAKE NEAT -->
+
+    <script src="./public/SNAKE-NEAT/js/constants.js"></script>
+    <script src="./public/SNAKE-NEAT/js/snake.js"></script>
+    <script src="./public/SNAKE-NEAT/js/food.js"></script>
+    <script src="./public/SNAKE-NEAT/js/game.js"></script>
+    <script src="./public/SNAKE-NEAT/js/runner.js"></script>
+    <script src="./public/SNAKE-NEAT/js/main.js"></script>
+
+    <!-- Custom Js Files for Flappy Bird -->
+	<script src = "./public/FLAPPY-BIRD/js/Neuroevolution.js"></script>
+	<script src = "./public/FLAPPY-BIRD/js/game.js"></script>
+
+	<!-- Custom Js files for SNAKE PORTAL -->
+	<script src="./public/SNAKE-PORTAL/js/index.js"></script>
+
+</body>
+</html>
