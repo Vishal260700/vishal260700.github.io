@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flappy Bird Simulation</title>
+
+	<!-- P5Js CDN -->
+
+	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+ 	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+
+ 	<!-- Bootstrap CDN -->
+
+ 	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body style="background: #F5B041;">
+	<center>
+	<h1 style="color: white;"><u>Flappy Bird Game</u></h1>
+	</center>
+
+	<div id="portal">
+		<center><h3 id ="score">Total Score : 0</h3></center>
+
+		<h3><u>Parameters</u></h3>	
+		<center>
+			<table class="table" style="border:1px solid #CCD1D1;border-radius: 5px;margin-top: 10px;">
+				<tr>
+					<td>
+						Gravity
+					</td>
+					<td>
+						<input type="number" id="gravity">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Lift
+					</td>
+					<td>
+						<input type="number" id="lift">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Game Speed
+					</td>
+					<td>
+						<input type="number" id="pipespeed">
+					</td>
+				</tr>
+			</table>
+		</center>
+
+		<h3><u>Rules</u></h3>	
+		<ol>
+			<li>Use Spacebar to jump the bird.</li>
+			<li>Game will start after 5 Seconds after the Game Over.</li>
+		</ol><br>
+		<center><i style="color: red;">*For now the Parameter portal is not working*</i></center>
+	</div>
+	
+
+	<!-- Additional Js -->
+
+ 	<script src="./data/index.js"></script>
+ 	<script src="./data/sketch.js"></script>
+ 	<script src="./data/pipe.js"></script>
+
+ 	<!-- Additional styling -->
+
+ 	<style>
+ 		canvas{
+ 			border-radius: 20px;
+ 			position: absolute;
+ 			z-index: -1;
+ 			top: 100px;
+ 			left: 200px;
+ 		}
+ 		#portal{
+ 			background: white;
+ 			margin-left: 55%;
+ 			width: 30%;
+ 			border-radius: 10px;
+ 			border: 1px solid black;
+ 			margin-top: 100px;
+ 			padding: 20px;
+ 		}
+ 		input{
+ 			border:none;
+ 			background: #D6EAF8;
+ 			border-radius: 2px;
+ 			margin-left: 20%;
+ 		}
+ 	</style>
+</body>
+</html>
