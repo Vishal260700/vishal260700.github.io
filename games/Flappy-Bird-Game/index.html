@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flappy Bird Simulation</title>
+
+	<!-- P5Js CDN -->
+
+	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+ 	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+
+ 	<!-- ChartJs CDN -->
+
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+ 	<!-- Bootstrap CDN -->
+
+ 	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body style="background: #F5B041;">
+	<center>
+	<h1 style="color: white;"><u>Flappy Bird Genetic Algo Run Simulation</u></h1>
+	</center>
+
+	<div class="container-fluid">
+
+		<div class="col-md-3"></div>
+
+		<div class="col-md-4" style="background: white;border-radius: 10px;margin-left: 80px;margin-top: 7%;">
+		<canvas id="myChart"></canvas>
+		
+		<center><h3 id ="score">Best Score of all Generations : 0</h3> 
+		<h3 id ="gen">Generation : 1</h3></center>
+		</div>
+
+		<div class="col-md-4" style="background: white;border-radius: 10px;margin-left: 20px;margin-top: 7%;">
+		<h3><u>Parameters</u></h3>	
+		<center>
+			<table class="table" style="border:1px solid #CCD1D1;border-radius: 5px;margin-top: 10px;">
+				<tr>
+					<td>
+						Gravity
+					</td>
+					<td>
+						<input type="number" id="gravity">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Lift
+					</td>
+					<td>
+						<input type="number" id="lift">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Hidden Layers (NN)
+					</td>
+					<td>
+						<input type="number" id="NN">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						Mutation rate (Genetic Algorithm)
+					</td>
+					<td>
+						<input type="number" id="GA">
+					</td>
+				</tr>
+			</table>
+		</center>
+
+		<h3><u>Generation Speed</u></h3>
+		<center><input type="range" id="gameSpeed" min="1" max="100" value="1" style="width: 300px;"></center>
+		<center><p>Min value = 1 and Max value = 100</p></center>
+
+		<center><i style="color: red;">*For now the Parameter portal is not working*</i></center>
+		</div>
+	</div>
+	
+	<!-- Neural Network -->
+
+	<script src="./data/neuralnetwork/matrix.js"></script>
+	<script src="./data/neuralnetwork/nn.js"></script>
+
+	<!-- Additional Js -->
+
+ 	<script src="./data/index.js"></script>
+ 	<script src="./data/pipe.js"></script>
+ 	<script src="./data/sketch.js"></script>
+ 	<script src="./data/geneticAlgo.js"></script>
+ 	<script src="./data/Charts.js"></script>
+
+ 	<!-- Additional styling -->
+
+ 	<style>
+ 		#defaultCanvas0{
+ 			border-radius: 20px;
+ 			position: absolute;
+ 			z-index: -1;
+ 			top: 100px;
+ 			left: 30px;
+ 		}
+ 		#portal{
+ 			background: white;
+ 			margin-left: 40%;
+ 			width: 50%;
+ 			border-radius: 10px;
+ 			border: 1px solid black;
+ 			margin-top: 40px;
+ 			padding: 20px;
+ 		}
+ 		input{
+ 			border:none;
+ 			background: #D6EAF8;
+ 			border-radius: 2px;
+ 		}
+ 		#gameSpeed{
+ 			margin-left: 0;
+ 		}
+
+ 	</style>
+</body>
+</html>
