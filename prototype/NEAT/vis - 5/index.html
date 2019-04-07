@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<!-- P5Js CDN -->
+
+	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+ 	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+
+ 	<!-- Bootstrap CDN -->
+
+ 	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body style="background: #F5B041;">
+
+	<div class="navbar">
+	  <a href="#" style="font-weight: bold;">GSoC Prototype</a>
+	  <a href="../" style="font-weight: bold;">Flappy Bird Genetic Algo</a>
+	  <a href="../Flappy-Game/" style="font-weight: bold;">Flappy Bird Game</a>
+	  <a href="../vis - 4/" style="font-weight: bold;">Population Generation</a>
+	  <a href="../vis - 3/" style="font-weight: bold;">Funtionality Addition</a>
+	  <a href="#" style="font-weight: bold;">Env Creation</a>
+	  <a href="../vis - 1/" style="font-weight: bold;">Time Vary Vis - I</a>
+	  <a href="../vis - 2/" style="font-weight: bold;">Time Vary Vis - II</a>
+	</div>
+
+	<div class="container-fluid">
+		<div class="col-md-12"> 
+			<h1 style="color: white;text-align: center;"> 
+				Environment Creation
+			</h1>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-6" style="border : 2px solid black; border-radius: 10px;background: white;font-size: 20px;padding: 10px;margin-top: 38px;">
+
+				<div class="col-md-12">
+					<p>
+						To test our species of Bird we need a testing environment for sure, in our case we will create a environment of the famous Flappy Bird Game.
+					</p>
+					<p>
+						On the right create a random environment with the button provided and alter the parameters of the environment with the downward options provided.
+					</p>
+				</div>
+
+				<div class="col-md-12">
+					<table class="table" style="border: 1px solid #E5E8E8;">
+						<tr>
+							<th>
+								Variable
+							</th>
+							<th>
+								Slider
+							</th>
+						</tr>
+						<tr>
+							<td>
+								First Pipe Top Length	
+							</td>
+							<td>
+								<input type="range" min="0" max="450" value="100" id="p1top">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Second Pipe Top Length	
+							</td>
+							<td>
+								<input type="range" min="0" max="450" value="200" id="p2top">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Third Pipe Top Length	
+							</td>
+							<td>
+								<input type="range" min="0" max="450" value="80" id="p3top">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								First Pipe Bottom Length	
+							</td>
+							<td>
+								<input type="range" min="0" max="450" value="260" id="p1bot">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Second Pipe Bottom Length	
+							</td>
+							<td>
+								<input type="range" min="0" max="450" value="140" id="p2bot">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Third Pipe Bottom Length	
+							</td>
+							<td>
+								<input type="range" min="0" max="450" value="260" id="p3bot">
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<center>
+					<button class="btn btn-primary" onclick="start();" style="margin-top: 500px;">Create Environment</button>
+				</center>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+
+<style type="text/css">
+	canvas{
+		border-radius: 10px;
+		border : 2px solid black;
+		position: absolute;
+		top : 180px;
+		left: 800px;
+	}
+</style>
+
+<!-- Additional CSS -->
+
+<link rel="stylesheet" type="text/css" href="./main.css">
+
+<!-- Additional Js files -->
+
+<script src="./Bird.js"></script>
+<script src="./index.js"></script>
+
+</html>
