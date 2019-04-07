@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<!-- P5Js CDN -->
+
+	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+ 	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+
+ 	<!-- Bootstrap CDN -->
+
+ 	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+ 	<!-- Additional Js files -->
+
+ 	<script src="./Bird.js"></script>
+ 	<script src="./index.js"></script>
+</head>
+<body style="background: #F5B041;">
+
+	<div class="navbar">
+	  <a href="#" style="font-weight: bold;">GSoC Prototype</a>
+	  <a href="../" style="font-weight: bold;">Flappy Bird Genetic Algo</a>
+	  <a href="../Flappy-Game/" style="font-weight: bold;">Flappy Bird Game</a>
+	  <a href="../vis - 4/" style="font-weight: bold;">Population Generation</a>
+	  <a href="#" style="font-weight: bold;">Funtionality Addition</a>
+	  <a href="../vis - 1/" style="font-weight: bold;">Time Vary Vis - I</a>
+	  <a href="../vis - 2/" style="font-weight: bold;">Time Vary Vis - II</a>
+	</div>
+
+	<div class="container-fluid">
+		<div class="col-md-12">
+			<center>
+				<h1 style="color: white;">Functionality Addition Visualization</h1>
+			</center>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-6" style="border : 2px solid black; border-radius: 10px;background: white;font-size: 20px;padding: 10px;margin-top: 60px;">
+				<p>
+					Okay well done !! we now have a population of living beings. But wait, there are no brains in them… no functionality ...Ok no big deal let’s add some functionality to them…
+				</p>
+				<p>
+					We now add a functionality to each member of the generated population with a same architecture. A lift Action and Gravity action assosciated to environment.
+				</p>
+				<p>
+					Try out the button actions provided to escape the pipes and observe how the bird behaves accordingly.
+				</p>
+				<p>
+					Lift Force = +10 <br>
+					Gravity Pull = -5 <br>
+					X - Direction Velocity = +2
+				</p>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-4">
+				<center>
+					<div style="margin-top: 460px;">
+						<button onclick="visualize();" class="btn btn-success">Jump (Lift Action)</button>
+						<button onclick="visualize2();" class="btn btn-danger">Down (Gravity Action)</button>			
+					</div>
+				</center>
+			</div>
+	</div>
+	</div>
+</body>
+<style>
+	canvas{
+		border-radius: 10px;
+		border : 2px solid black;
+		position: absolute;
+		top : 180px;
+		left: 850px;
+	}
+</style>
+
+
+<!-- Additional CSS -->
+
+<link rel="stylesheet" type="text/css" href="./main.css">
+
+</html>

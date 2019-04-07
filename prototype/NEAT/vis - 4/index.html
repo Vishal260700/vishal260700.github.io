@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flappy Bird Simulation</title>
+	<title></title>
 
 	<!-- P5Js CDN -->
 
@@ -19,72 +19,63 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+ 	<!-- Additional Js files -->
+
+ 	<script src="./Bird.js"></script>
+ 	<script src="./index.js"></script>
 </head>
 <body style="background: #F5B041;">
 
 	<div class="navbar">
 	  <a href="#" style="font-weight: bold;">GSoC Prototype</a>
 	  <a href="../" style="font-weight: bold;">Flappy Bird Genetic Algo</a>
-	  <a href="#" style="font-weight: bold;">Flappy Bird Game</a>
-	  <a href="../vis - 4/" style="font-weight: bold;">Population Generation</a>
+	  <a href="../Flappy-Game/" style="font-weight: bold;">Flappy Bird Game</a>
+	  <a href="#" style="font-weight: bold;">Population Generation</a>
 	  <a href="../vis - 3/" style="font-weight: bold;">Funtionality Addition</a>
 	  <a href="../vis - 1/" style="font-weight: bold;">Time Vary Vis - I</a>
 	  <a href="../vis - 2/" style="font-weight: bold;">Time Vary Vis - II</a>
 	</div>
 
-	<center>
-	<h1 style="color: white;"><u>Flappy Bird Game</u></h1>
-	</center>
+	<div class="container-fluid">
+		<div class="col-md-12"> 
+			<h1 style="color: white;text-align: center;"> 
+				Population generation
+			</h1>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-6" style="border : 2px solid black; border-radius: 10px;background: white;font-size: 20px;padding: 10px;margin-top: 160px;">
 
-	<div id="portal">
-		<center><h3 id ="score">Total Score : 0</h3></center>
+				<p>
+					Lets say, we are to make a population of birds and experiment on their behaviour to better understand their activities and redesign them to be the best. So to do so first-of-all we have to create a population to experiment with…
+				</p>
 
-		<h3><u>Parameters</u></h3>	
-		<center>
-			<table class="table" style="border:1px solid #CCD1D1;border-radius: 5px;margin-top: 10px;">
-				<tr>
-					<td>
-						Gravity
-					</td>
-					<td>
-						<input type="number" id="gravity">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Lift
-					</td>
-					<td>
-						<input type="number" id="lift">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Game Speed
-					</td>
-					<td>
-						<input type="number" id="pipespeed">
-					</td>
-				</tr>
-			</table>
-		</center>
-
-		<h3><u>Rules</u></h3>	
-		<ol>
-			<li>Use Spacebar to jump the bird.</li>
-			<li>Game will start after 5 Seconds after the Game Over.</li>
-		</ol><br>
-		<center><i style="color: red;">*For now the Parameter portal is not working*</i></center>
+				<p>
+					Create a population of say ‘n’ number of same type by pressing the button provided.
+				</p>
+				
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<center><button class="btn btn-primary" onclick="start();" style="margin-top: 500px;">Generate Population</button></center>
+			</div>
+		</div>
 	</div>
+
 	
-
-	<!-- Additional Js -->
-
- 	<script src="./data/index.js"></script>
- 	<script src="./data/sketch.js"></script>
- 	<script src="./data/pipe.js"></script>
-
- 	<!-- Additional Styling -->
- 	<link rel="stylesheet" type="text/css" href="./main.css">
 </body>
+
+<style type="text/css">
+	canvas{
+		border-radius: 10px;
+		border : 2px solid black;
+		position: absolute;
+		top : 180px;
+		left: 800px;
+	}
+</style>
+
+<!-- Additional CSS -->
+
+<link rel="stylesheet" type="text/css" href="./main.css">
+
 </html>
