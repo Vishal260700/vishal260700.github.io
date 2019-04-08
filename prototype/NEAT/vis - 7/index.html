@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mutation Variation</title>
+
+  <!-- Bootstrap CDN -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+  <script src="https://unpkg.com/mathjs@5.8.0/dist/math.min.js"></script>
+
+  <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
+
+  <style>
+    input[type=text] {
+      width: 300px;
+    }
+    input {
+      padding: 6px;
+    }
+    body, html, input {
+      font-family: sans-serif;
+      font-size: 11pt;
+
+    }
+    form {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body style="background: #F5B041;">
+
+  <div class="navbar">
+    <a href="../" style="font-weight: bold;">Genetic Algorithm</a>
+    <a href="../Flappy-Game/" style="font-weight: bold;">Flappy Bird Game</a>
+    <a href="../vis - 4/" style="font-weight: bold;">Population Generate</a>
+    <a href="../vis - 3/" style="font-weight: bold;">Funtionality Add</a>
+    <a href="../vis - 5/" style="font-weight: bold;">Env Create</a>
+    <a href="../vis - 1/" style="font-weight: bold;">Time Vary Vis-I(A)</a>
+    <a href="../vis - 6/" style="font-weight: bold;">Time Vary Vis-I(B)</a>
+    <a href="../vis - 2/" style="font-weight: bold;">Time Vary Vis-II</a>
+    <a href="#" style="font-weight: bold;">Mutation Variation</a>
+  </div>
+
+<div class="container-fluid">
+  <div class="col-md-12">
+    <center>
+      <h1 style="color: white;margin-bottom: 30px;">Mutation Parameter Variation</h1>
+    </center>
+  </div>
+  <div class="col-md-12" style="background: white;">
+    <div class="col-md-3" id="myDiv1" style="height: 300px;"></div>
+    <div class="col-md-3" id="myDiv2" style="height: 300px;"></div>
+    <div class="col-md-3" id="myDiv3" style="height: 300px;"></div>
+    <div class="col-md-3" id="myDiv4" style="height: 300px;"></div>
+  </div>
+  <div class="col-md-12" style="background: white;">
+    <div class="col-md-3" style="text-align: center;">
+      <h4>Standard Function = log(x2)</h4>
+      <h5 id="s1"></h5>
+    </div>
+    <div class="col-md-3" style="text-align: center;">
+      <h4>Standard Function = (x2)^2</h4>
+      <h5 id="s2"></h5>
+    </div>
+    <div class="col-md-3" style="text-align: center;">
+      <h4>Standard Function = (x2)^3</h4>
+      <h5 id="s3"></h5>
+    </div>
+    <div class="col-md-3" style="text-align: center;">
+      <h4>Standard Function = exp(x2)</h4>
+      <h5 id="s4"></h5>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <center>
+
+      <form id="form">
+      <label for="eq">Mutation Function = </label>
+      <input type="text" id="eq" value="4 * sin(x) + 5 * cos(x/2)" /><br><br>
+      <label for="in">Input Value (x1) = </label>
+      <input type="number" id="in" value="1">
+      <button type="submit" onclick="draw();" class="btn btn-success">Submit</button>
+    </form>
+
+    <h4 id="out">
+      Ouput Value of Mutation Function (x2) = 
+    </h4>
+
+  </center>
+  </div>
+  <div class="col-md-12">
+    <center><h3>As we can see for a value x1 with F(x1) = x2. The Output of Standard Functions Fs(x2) are very different from x1.</h3></center>
+  </div>
+</div>
+
+<script>
+  function draw() {
+    try {
+      // compile the expression once
+      const expression = document.getElementById('eq').value;
+      const expr = math.compile(expression);
+
+      const inp = [parseInt(document.getElementById('in').value)];
+
+      const outp = inp.map(function (x) {
+        return expr.eval({x: x})
+      });
+
+      document.getElementById('out').innerHTML = "Ouput Value of Mutation Function (x2) = " + outp[0];
+
+      // evaluate the expression repeatedly for different values of x
+
+      const expr1 = math.compile("log(x)");
+      const expr2 = math.compile("x^2");
+      const expr3 = math.compile("x^3");
+      const expr4 = math.compile("exp(x)");
+
+      const xValues1 = math.range(-20,20,0.5).toArray()
+      const yValues1 = xValues1.map(function (x) {
+        return expr1.eval({x: x})
+      })
+      const xValues2 = math.range(-20,20, 0.5).toArray()
+      const yValues2 = xValues2.map(function (x) {
+        return expr2.eval({x: x})
+      })
+      const xValues3 = math.range(-20,20,0.5).toArray()
+      const yValues3 = xValues3.map(function (x) {
+        return expr3.eval({x: x})
+      })
+      const xValues4 = math.range(-20,20,0.5).toArray()
+      const yValues4 = xValues4.map(function (x) {
+        return expr4.eval({x: x})
+      })
+
+      // render the plot using plotly
+      const trace1 = {
+        x: xValues1,
+        y: yValues1,
+        type: 'scatter'
+      }
+      // render the plot using plotly
+      const trace2 = {
+        x: xValues2,
+        y: yValues2,
+        type: 'scatter'
+      }
+      // render the plot using plotly
+      const trace3 = {
+        x: xValues3,
+        y: yValues3,
+        type: 'scatter'
+      }
+      // render the plot using plotly
+      const trace4 = {
+        x: xValues4,
+        y: yValues4,
+        type: 'scatter'
+      }
+
+
+      var data1 = [trace1];
+      var data2 = [trace2];
+      var data3 = [trace3];
+      var data4 = [trace4];
+
+      var gd1 = document.getElementById('myDiv1');
+      var gd2 = document.getElementById('myDiv2');
+      var gd3 = document.getElementById('myDiv3');
+      var gd4 = document.getElementById('myDiv4');
+
+      const s1 = outp.map(function (x) {
+        return expr1.eval({x: x})
+      })
+      const s2 = outp.map(function (x) {
+        return expr2.eval({x: x})
+      })
+      const s3 = outp.map(function (x) {
+        return expr3.eval({x: x})
+      })
+      const s4 = outp.map(function (x) {
+        return expr4.eval({x: x})
+      })
+
+      document.getElementById('s1').innerHTML = "OutPut from Fs(x2) = " + s1[0];
+      document.getElementById('s2').innerHTML = "OutPut from Fs(x2) = " + s2[0];
+      document.getElementById('s3').innerHTML = "OutPut from Fs(x2) = " + s3[0];
+      document.getElementById('s4').innerHTML = "OutPut from Fs(x2) = " + s4[0];
+
+      Plotly.newPlot(gd1, data1, {showSendToCloud: true});
+      Plotly.newPlot(gd2, data2, {showSendToCloud: true});
+      Plotly.newPlot(gd3, data3, {showSendToCloud: true});
+      Plotly.newPlot(gd4, data4, {showSendToCloud: true});
+
+
+    }
+    catch (err) {
+      console.error(err)
+      alert(err)
+    }
+  }
+
+  document.getElementById('form').onsubmit = function (event) {
+    event.preventDefault()
+    draw()
+  }
+  draw()
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="./main.css">
+
+</body>
+</html>
