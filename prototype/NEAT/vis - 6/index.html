@@ -19,6 +19,10 @@
 	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
  	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
 
+ 	<!-- Additional Js files -->
+
+ 	<script src="./Bird.js"></script>
+ 	<script src="./sketch.js"></script>
 </head>
 <body style="background: #F5B041;">
 
@@ -29,48 +33,33 @@
 	  <a href="../vis - 3/" style="font-weight: bold;">Funtionality Addition</a>
 	  <a href="../vis - 5/" style="font-weight: bold;">Env Creation</a>
 	  <a href="../vis - 1/" style="font-weight: bold;">Time Vary Vis - I(A)</a>
-	  <a href="../vis - 6/" style="font-weight: bold;">Time Vary Vis - I(B)</a>
-	  <a href="#" style="font-weight: bold;">Time Vary Vis - II</a>
+	  <a href="#" style="font-weight: bold;">Time Vary Vis - I(B)</a>
+	  <a href="../vis - 2/" style="font-weight: bold;">Time Vary Vis - II</a>
 	</div>
+
 
 	<div class="col-md-12">
-		<h1 style="text-align: center;color: white;font-weight: bold;">Single bird Visualization - II</h1>
+		<h1 style="text-align: center;color: white;font-weight: bold;">Two bird Visualization - I(B)</h1>
 	</div>
 
-	<div class="container-fluid" style="margin-top: 8.5%;">
+	<div class="container-fluid" style="margin-top: 13.5%;">
 		<div class="col-md-6" style="font-size: 20px;background: white; border:2px solid black; border-radius: 10px;margin-left: 5%;">
 
 			<div class="col-md-12" style="margin-top: 20px;">
 				<p>
-					Above, we watched the Bird evolve in real time. A realtime view is useful for getting a direct, visceral sense of a system's behavior.
+				We started off with a great way to escape the pipes, but what about the failures that happens to other population members if they hit the pipe. Let’s track them this time for a total of 2 birds in a single Environment. 
+				</p>
+				<p>
+					As we can see the 2nd bird is knocked down by the pipe - I and is shown to get stuck their. The Genetic Algorithm works differently for different population member. But some Population members after tunnin (Mutation) achieves "State of the Art".
 				</p>
 			</div>
 
-			<div class="col-md-12">
-					<p>
-					However real time is also quite limiting. For example a video editor has to go through each frame per second to get the best out of a video and edit them continously. Most of our systems are going through stuffs step by step. It's absurd but it's the truth !!
-					</p>
-			</div>
-
-			<div class="col-md-12">
-			<p>
-			<span style="color: red;">Mouse over the slider at the right </span> to control time explicitly. We can easily simulate realtime playback simply by moving the mouse over the slider at a steady rate.
-			</p>	
-			<p>
-			One should never be bound to time to get to know of how thinks work. We will start over with the parameters to control our bird from now on.
-			</p>	
-			<center>
-			<i style="font-size: 10px;color: red;">*The Ability to Skim directly over a part is not present currently. I plan to add that later.*</i>
-			</center>
-			</div>
-
 		</div>
-		<div class="col-md-1">
-			
-		</div>
+
+		<div class="col-md-1"></div>
+
 		<div class="col-md-3">
-			<input type="range" id="visualise" min="0" max = "240" value="0" style="margin-top: 410px;">
-			<p style="border:2px solid black; border-radius: 5px;font-weight: bold;padding: 5px;background: white;margin-top: 40px;">
+			<p style="border:2px solid black; border-radius: 5px;font-weight: bold;padding: 5px;background: white;margin-top: 330px;">
 				Lift Constant = 10 (Upwards) <br>
 				Gravity constant = 5 (Downwards) <br>
 				X - Direction Velocity = 2 (Rightwards)
@@ -78,39 +67,24 @@
 		</div>
 	</div>
 
+	</div>
+
 	<div class="col-md-12">
 		<h3 style="text-align: center;color: white;font-weight: bold;">Analogous to Bret Victor's Ladder of Abstraction, Ladder - I</h3>
 	</div>
 
-	<p style="text-align: center;color: white;font-weight: bold;" id="stepped"></p>
-
 </body>
-
-<!-- Additional Js files -->
-
-<script src="./Bird.js"></script>
-<script src="./sketch.js"></script>
-
-<!-- Additional CSS -->
-
-<link rel="stylesheet" type="text/css" href="./main.css">
-
 
 <style type="text/css">
 	canvas{
 		border-radius: 10px;
 		border : 2px solid black;
 		position: absolute;
-		top : 180px;
+		top : 170px;
 		left: 900px;
-	}
-	#stepped{
-		width: 500px;
-		position: absolute;
-		top : 620px;
-		left: 900px;
-		font-size: 20px;
 	}
 </style>
+
+<link rel="stylesheet" type="text/css" href="./main.css">
 
 </html>
